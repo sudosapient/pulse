@@ -1,18 +1,20 @@
 :root {
-  --bg: #f3efe6;
-  --ink: #1c1a16;
-  --muted: #6b6458;
-  --line: #d7d0c3;
-  --panel: #fffdf8;
-  --up: #1f7a45;
-  --down: #b42318;
-  --accent: #0f4c5c;
-  --shadow: 0 10px 30px rgba(28, 26, 22, 0.06);
+  --bg: #0e1116;
+  --ink: #e8eaed;
+  --muted: #9aa3ad;
+  --line: #2a313c;
+  --panel: #161b22;
+  --up: #3dd68c;
+  --down: #f07178;
+  --accent: #5b9fd4;
+  --input: #0d1117;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  color-scheme: dark;
   font-family: "IBM Plex Sans", sans-serif;
   color: var(--ink);
   background:
-    radial-gradient(circle at top left, rgba(15, 76, 92, 0.08), transparent 40%),
-    linear-gradient(180deg, #f7f3ea 0%, var(--bg) 100%);
+    radial-gradient(circle at top left, rgba(91, 159, 212, 0.12), transparent 42%),
+    linear-gradient(180deg, #12161d 0%, var(--bg) 100%);
 }
 
 * {
@@ -80,9 +82,9 @@ h2 {
 }
 
 .banner {
-  background: #f8e4e1;
+  background: rgba(240, 113, 120, 0.12);
   color: var(--down);
-  border: 1px solid #efc4be;
+  border: 1px solid rgba(240, 113, 120, 0.35);
   padding: 0.75rem 1rem;
   margin-bottom: 1rem;
 }
@@ -112,15 +114,19 @@ label {
 input {
   width: 100%;
   border: 1px solid var(--line);
-  background: #fff;
+  background: var(--input);
   padding: 0.65rem 0.75rem;
   color: var(--ink);
+}
+
+input::placeholder {
+  color: #6b7280;
 }
 
 button {
   border: 1px solid var(--accent);
   background: var(--accent);
-  color: #fff;
+  color: #0b1016;
   padding: 0.7rem 1rem;
   cursor: pointer;
 }
@@ -133,7 +139,7 @@ button:disabled {
 button.danger {
   background: transparent;
   color: var(--down);
-  border-color: #efc4be;
+  border-color: rgba(240, 113, 120, 0.45);
 }
 
 .list {
@@ -158,7 +164,7 @@ button.danger {
   align-items: center;
   width: 100%;
   text-align: left;
-  background: #fff;
+  background: var(--input);
   color: var(--ink);
   border: 1px solid var(--line);
 }
@@ -195,7 +201,7 @@ button.danger {
   width: 0.7rem;
   height: 0.7rem;
   border-radius: 50%;
-  background: #b7b0a3;
+  background: #5a6573;
 }
 
 .dot.up,
@@ -211,13 +217,14 @@ button.danger {
 .badge {
   font-family: "IBM Plex Mono", monospace;
   font-size: 0.75rem;
-  color: #fff;
+  color: #0b1016;
   padding: 0.2rem 0.45rem;
   text-transform: uppercase;
 }
 
 .badge.muted {
-  background: #8a8274;
+  background: #6b7280;
+  color: #0b1016;
 }
 
 .up {
